@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="Everyone_With_Math.Class.Grade_01"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="720" Width="1280" >
+    <Viewbox>
+        <DockPanel Height="720" Width="1280">
+            <Image x:Name="Main_Image" Height="720" VerticalAlignment="Top" Width="1280" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Grade_01_Questions.png"/>
+            <ListBox x:Name="Question_List" Height="613" VerticalAlignment="Top" Width="488" Margin="-1280,30,0,0" Background="Transparent" FontFamily="Segoe UI Semibold" FontSize="20" Foreground="Aqua" BorderBrush="Aqua" SelectionChanged="Question_List_SelectionChanged"/>
+            <Image x:Name="Back_B" Height="68" VerticalAlignment="Top" Width="311" Stretch="None" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Back.png" Margin="-2075,575,0,0" MouseEnter="Back_B_MouseEnter" MouseLeave ="Back_B_MouseLeave" MouseDown="Back_B_MouseDown"/>
+
+        </DockPanel>
+    </Viewbox>
+</UserControl>

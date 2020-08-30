@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="Everyone_With_Math.Configs_Class"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="720" Width="1280" >
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="CyanBrush" Color="Pink" />
+        <SolidColorBrush x:Key="PinkBrush" Color="Aqua" />
+        <SolidColorBrush x:Key="LimeBrush" Color="Aqua" />
+        <Style x:Key="SliderThumbStyle" TargetType="{x:Type Thumb}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Ellipse Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Slider}, Mode=FindAncestor}}" Width="25" Height="25"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="CustomSliderStyle" TargetType="{x:Type Slider}">
+            <Style.Triggers>
+                <Trigger Property="Orientation" Value="Horizontal">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="25" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <TickBar Grid.Row="0" x:Name="TopTick" Placement="Top" Visibility="Collapsed" Fill="{TemplateBinding Foreground}" Height="8" Opacity="0.64" Margin="0,0,0,2" />
+                                    <TickBar Grid.Row="2" x:Name="BottomTick" Placement="Bottom" Visibility="Collapsed" Fill="{TemplateBinding Foreground}" Height="8" Opacity="0.64" Margin="0,2,0,0" />
+                                    <Track Grid.Row="1" x:Name="PART_Track">
+                                        <Track.DecreaseRepeatButton>
+                                            <RepeatButton Command="Slider.DecreaseLarge" Background="{TemplateBinding Foreground}" Height="5" BorderBrush="{x:Null}" Opacity="0.2"/>
+                                        </Track.DecreaseRepeatButton>
+                                        <Track.IncreaseRepeatButton>
+                                            <RepeatButton Command="Slider.IncreaseLarge" Background="{TemplateBinding Foreground}" Height="5" BorderBrush="{x:Null}" Opacity="0.5"/>
+                                        </Track.IncreaseRepeatButton>
+                                        <Track.Thumb>
+                                            <Thumb Style="{StaticResource SliderThumbStyle}"/>
+                                        </Track.Thumb>
+                                    </Track>
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="Slider.TickPlacement" Value="TopLeft">
+                                        <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+                                    </Trigger>
+                                    <Trigger Property="Slider.TickPlacement" Value="BottomRight">
+                                        <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+                                    </Trigger>
+                                    <Trigger Property="Slider.TickPlacement" Value="Both">
+                                        <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+                                        <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Viewbox>
+        <DockPanel Height="720" Width="1280">
+            <Image x:Name="Main_Image" Height="720" VerticalAlignment="Top" Width="1280" Stretch="Fill" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Configs_Base_01.png"/>
+            <Image x:Name="Back_B" Height="68" VerticalAlignment="Top" Width="311" Stretch="None" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Back.png" Margin="-400,650,0,0" MouseEnter="Back_B_MouseEnter" MouseLeave="Back_B_MouseLeave" MouseDown="Back_B_MouseDown"/>
+            <TextBlock x:Name="SE_Volume_T" Height="42" Width="249" TextWrapping="Wrap" Text="SE音量:25" VerticalAlignment="Top" Foreground="Aqua" FontFamily="Segoe UI Semibold" FontSize="36" Margin="-1780,125,0,0" TextAlignment="Center"/>
+            <Slider x:Name="SE_Volume_S" Height="26" VerticalAlignment="Top" Width="300" Margin="-1800,175,0,0" Maximum="100" SmallChange="1" Value="25" MouseEnter="SE_Volume_S_MouseEnter" MouseLeave="SE_Volume_S_MouseLeave" ValueChanged="SE_Volume_S_ValueChanged" Style="{StaticResource CustomSliderStyle}" Foreground="{DynamicResource CyanBrush}"/>
+            <TextBlock x:Name="BGM_Volume_T" Height="42" Width="249" TextWrapping="Wrap" Text="BGM音量:25" VerticalAlignment="Top" Foreground="Aqua" FontFamily="Segoe UI Semibold" FontSize="36" Margin="-1780,230,0,0" TextAlignment="Center"/>
+            <Slider x:Name="BGM_Volume_S" Height="28" VerticalAlignment="Top" Width="300" Margin="-1800,280,0,0" Maximum="100" SmallChange="1" Value="25" MouseEnter="BGM_Volume_S_MouseEnter" MouseLeave="BGM_Volume_S_MouseLeave" ValueChanged="BGM_Volume_S_ValueChanged" Style="{StaticResource CustomSliderStyle}" Foreground="{DynamicResource CyanBrush}"/>
+            <TextBlock x:Name="Text_Speed_T" Height="42" Width="308" TextWrapping="Wrap" Text="テキスト速度:30" VerticalAlignment="Top" Foreground="Aqua" FontFamily="Segoe UI Semibold" FontSize="36" Margin="-1780,335,0,0" TextAlignment="Center"/>
+            <Slider x:Name="Text_Speed_S" Height="28" VerticalAlignment="Top" Width="300" Margin="-1800,385,0,0" Maximum="60" SmallChange="1" Value="30" Minimum="1" MouseEnter="Text_Speed_S_MouseEnter" MouseLeave="Text_Speed_S_MouseLeave" ValueChanged="Text_Speed_S_ValueChanged" Style="{StaticResource CustomSliderStyle}" Foreground="{DynamicResource CyanBrush}"/>
+            <TextBlock x:Name="Text_T" Height="42" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500" Margin="-1970,662,0,0" Foreground="Aqua" FontFamily="Segoe UI Semibold" FontSize="32" TextAlignment="Center"/>
+            <ListBox x:Name="Window_Mode_Setting" Height="86" VerticalAlignment="Top" Width="318" Margin="-445,125,0,0" Background="Transparent" Foreground="Aqua" BorderBrush="Aqua" FontSize="30" FontFamily="Segoe UI Semibold" SelectionChanged="Window_Mode_Setting_SelectionChanged" MouseEnter="Window_Mode_Setting_MouseEnter" MouseLeave="Window_Mode_Setting_MouseLeave"/>
+            <TextBlock x:Name="Window_Color_T" Height="47" Width="380" TextWrapping="Wrap" Text="ウィンドウの色:ピンク" VerticalAlignment="Top" Foreground="Aqua" FontFamily="Segoe UI Semibold" FontSize="36" Margin="-455,230,0,0" TextAlignment="Center"/>
+            <ListBox x:Name="Window_Color_L" Height="225" VerticalAlignment="Top" Width="318" Margin="-445,275,0,0" Background="Transparent" Foreground="Aqua" BorderBrush="Aqua" FontSize="30" FontFamily="Segoe UI Semibold" MouseEnter="Window_Color_L_MouseEnter"  MouseLeave="Window_Color_L_MouseLeave" SelectionChanged="Window_Color_L_SelectionChanged"/>
+            <Image x:Name="Click_Explosion_Image" Height="35" VerticalAlignment="Top" Width="35" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Check_01.png" Margin="-750,550,0,0" MouseDown="Click_Explosion_Image_MouseDown" MouseEnter="Click_Explosion_Image_MouseEnter" MouseLeave="Click_Explosion_Image_MouseLeave"/>
+            <TextBlock x:Name="Click_Explosion_T" Height="28" Width="320" TextWrapping="Wrap" Text="クリックのエフェクトを有効" VerticalAlignment="Top" Margin="-400,550,0,0" FontFamily="Segoe UI Semibold" FontSize="24" Foreground="Aqua" MouseEnter="Click_Explosion_Image_MouseEnter" MouseLeave="Click_Explosion_Image_MouseLeave" MouseDown="Click_Explosion_Image_MouseDown"/>
+            <ListBox x:Name="Click_Explosion_L" Height="225" VerticalAlignment="Top" Width="250" Margin="-1045,410,0,0" Background="Transparent" Foreground="Aqua" BorderBrush="Aqua" FontSize="30" FontFamily="Segoe UI Semibold" MouseEnter="Click_Explosion_L_MouseEnter" MouseLeave="Click_Explosion_L_MouseLeave" SelectionChanged="Click_Explosion_L_SelectionChanged"/>
+        </DockPanel>
+    </Viewbox>
+</UserControl>

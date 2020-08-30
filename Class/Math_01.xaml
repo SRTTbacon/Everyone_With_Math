@@ -1,0 +1,57 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Everyone_With_Math="clr-namespace:Everyone_With_Math" xmlns:local="clr-namespace:Everyone_With_Math.Class" x:Class="Everyone_With_Math.Class.Math_01"
+        WindowStyle="None"
+        AllowsTransparency="True" 
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        Icon="/Everyone_With_Math;component/Resources/Icon.ico"
+        Title="世界は数学と共に！！！" Height="720" Width="1280" KeyDown="Window_KeyDown" MouseDown="Window_MouseDown">
+    <Viewbox>
+        <DockPanel Width="1280" Height="720">
+            <Image x:Name="Black_Image" Height="720" Width="1280" Stretch="Fill" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Black.png"/>
+            <Image x:Name="Main_Image_01" Height="720" Width="1280" Stretch="Fill" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\White.png" Margin="-1280,0,0,0"/>
+            <Image x:Name="Main_Image_02" Height="720" Width="1280" Stretch="Fill" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\White.png" Margin="-1280,0,0,0"/>
+            <Image x:Name="Chara_Image" Height="534" VerticalAlignment="Top" Width="664" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Story\Chara\1\6.png" Margin="-1280,190,0,0" Stretch="Uniform"/>
+            <Image x:Name="Window_Image" Height="175" VerticalAlignment="Top" Width="1280" Margin="-1280,545,0,0" Stretch="Fill" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Window_02.png"/>
+            <Image x:Name="Chara_Mini_Image" Height="331" VerticalAlignment="Top" Width="269" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Story\Chara\1\6.png" Margin="-2550,545,0,-156" Stretch="UniformToFill"/>
+            <TextBlock x:Name="Text_01_T" Height="133" Width="1000" Margin="-1278,587,0,0" TextWrapping="Wrap" Text="数学の道へようこそ！！！" Foreground="Black" VerticalAlignment="Top" FontSize="30" FontFamily="Nirmala UI" FontWeight="Bold"/>
+            <TextBlock x:Name="Text_02_T" Height="135" Width="1000" Margin="-1280,585,0,0" TextWrapping="Wrap" Text="数学の道へようこそ！！！" Foreground="White" VerticalAlignment="Top" FontFamily="Nirmala UI" FontSize="30" FontWeight="Bold"/>
+            <TextBlock x:Name="Name_01_T" Height="48" Width="166" Margin="-2378,567,0,0" TextWrapping="Wrap" Text="???" Foreground="Black" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="40" TextAlignment="Center" Visibility="Visible"/>
+            <TextBlock x:Name="Name_02_T" Height="48" Width="166" Margin="-2380,565,0,0" TextWrapping="Wrap" Text="???" Foreground="White" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="40" TextAlignment="Center" Visibility="Visible"/>
+            <Image x:Name="Kakko_Image" Width="25" Height="75" Margin="-2300,620,0,0" Stretch="Uniform" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Math\中カッコ.png" Visibility="Hidden"/>
+            <Image x:Name="Title_Image" Height="40" VerticalAlignment="Top" Width="29" Stretch="Uniform" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Title.png" Margin="-50,675,0,0" MouseEnter="Title_Image_MouseEnter" MouseLeave="Title_Image_MouseLeave" MouseDown="Title_Image_MouseDown"/>
+            <Image x:Name="Config_Image" Height="40" VerticalAlignment="Top" Width="40" Stretch="Uniform" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Config.png" Margin="-150,675,0,0" MouseEnter="Config_Image_MouseEnter" MouseLeave="Config_Image_MouseLeave" MouseDown="Config_Image_MouseDown"/>
+            <Image x:Name="Save_Image" Height="36" VerticalAlignment="Top" Width="66" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Save\Save_00.png" Margin="-275,680,0,0" Stretch="Uniform" MouseEnter="Save_Image_MouseEnter" MouseLeave="Save_Image_MouseLeave" MouseDown="Save_Image_MouseDown"/>
+            <Image x:Name="Load_Image" Height="36" VerticalAlignment="Top" Width="66" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Save\Load_00.png" Margin="-425,682,0,0" Stretch="Uniform" MouseEnter="Load_Image_MouseEnter" MouseLeave="Load_Image_MouseLeave" MouseDown="Load_Image_MouseDown"/>
+            <Image x:Name="Log_Image" Height="36" VerticalAlignment="Top" Width="29" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Log_01.png" Margin="-545,680,0,0" Stretch="Uniform" MouseEnter="Log_Image_MouseEnter" MouseLeave="Log_Image_MouseLeave" MouseDown="Log_Image_MouseDown"/>
+            <TextBlock x:Name="Question_Number_T" Height="50" Width="130" TextWrapping="Wrap" Text="1/30" VerticalAlignment="Top" Foreground="Aqua" Margin="-150,10,0,0" FontFamily="Segoe UI Semibold" FontSize="36" TextAlignment="Center" Visibility="Hidden"/>
+            <TextBlock x:Name="Help_T" Height="130" Width="633" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="30" Margin="-1920,0,0,0" Foreground="Aqua" Visibility="Hidden"/>
+            <Image x:Name="Math_Image" Height="257" VerticalAlignment="Top" Width="506" Margin="-1280,325,0,0" Stretch="Uniform" Visibility="Hidden"/>
+            <Image x:Name="Choice_01_Image" Height="108" VerticalAlignment="Top" Width="575" Stretch="Uniform" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Choice_01.png" Margin="-1280,75,0,0" MouseEnter="Choice_01_Image_MouseEnter" MouseLeave="Choice_01_Image_MouseLeave" Visibility="Hidden"/>
+            <TextBlock x:Name="Choice_01_T" Height="48" Width="500" TextWrapping="Wrap" Text="選択肢1" VerticalAlignment="Top" Margin="-1280,100,0,0" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="36" TextAlignment="Center" MouseEnter="Choice_01_T_MouseEnter" Visibility="Hidden"/>
+            <Image x:Name="Choice_02_Image" Height="108" VerticalAlignment="Top" Width="575" Stretch="Uniform" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Choice_01.png" Margin="-1280,225,0,0" MouseEnter="Choice_02_Image_MouseEnter" MouseLeave="Choice_02_Image_MouseLeave" Visibility="Hidden"/>
+            <TextBlock x:Name="Choice_02_T" Height="48" Width="505" TextWrapping="Wrap" Text="選択肢2" VerticalAlignment="Top" Margin="-1280,260,0,0" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="36" TextAlignment="Center" MouseEnter="Choice_02_T_MouseEnter" Visibility="Hidden"/>
+            <Image x:Name="Choice_03_Image" Height="108" VerticalAlignment="Top" Width="575" Stretch="Uniform" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Choice_01.png" Margin="-1280,375,0,0" MouseEnter="Choice_03_Image_MouseEnter" MouseLeave="Choice_03_Image_MouseLeave" Visibility="Hidden"/>
+            <TextBlock x:Name="Choice_03_T" Height="48" Width="494" TextWrapping="Wrap" Text="選択肢3" VerticalAlignment="Top" Margin="-1280,410,0,0" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="36" TextAlignment="Center" MouseEnter="Choice_03_T_MouseEnter" Visibility="Hidden" />
+            <Image x:Name="Choice_04_Image" Height="108" VerticalAlignment="Top" Width="575" Stretch="Uniform" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Choice_01.png" Margin="-1280,525,0,0" MouseEnter="Choice_04_Image_MouseEnter" MouseLeave="Choice_04_Image_MouseLeave" Visibility="Hidden"/>
+            <TextBlock x:Name="Choice_04_T" Height="48" Width="494" TextWrapping="Wrap" Text="選択肢4" VerticalAlignment="Top" Margin="-1280,560,0,0" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="36" TextAlignment="Center" MouseEnter="Choice_04_T_MouseEnter" Visibility="Hidden" />
+            <Image x:Name="BackLog_Image" Height="720" VerticalAlignment="Top" Width="1280" Stretch="Fill" Margin="-1280,0,0,0" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\BackLog_01.png" Visibility="Hidden"/>
+            <ListBox x:Name="BackLog_L" Height="575" Width="1000" VerticalAlignment="Top" Margin="-1200,125,0,0" Background="Transparent" Foreground="Aqua" FontFamily="Segoe UI Semibold" FontSize="30" BorderBrush="Aqua" Visibility="Hidden"/>
+            <Image x:Name="BackLog_Close_Image" Height="35" Width="35" VerticalAlignment="Top" Margin="-100,665,0,0" Visibility="Hidden" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Close_01.png" MouseEnter="BackLog_Close_Image_MouseEnter" MouseLeave="BackLog_Close_Image_MouseLeave" MouseDown="BackLog_Close_Image_MouseDown"/>
+            <Image x:Name="Dialog_Image" Height="362" VerticalAlignment="Top" Width="672" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Dialog.png" Margin="-1280,175,0,0" Visibility="Hidden" Opacity="0"/>
+            <Image x:Name="Dialog_Effect_Image" Height="81" VerticalAlignment="Top" Width="616" Margin="-1280,325,0,0" Stretch="UniformToFill" Visibility="Hidden" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\Motion\Spark\1.png" Opacity="0"/>
+            <Image x:Name="Dialog_Message_Iage" Height="48" VerticalAlignment="Top" Width="496" Stretch="Uniform" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Message_03.png" Margin="-1280,230,0,0" Visibility="Hidden" Opacity="0"/>
+            <Image x:Name="Dialog_Yes_Image" Height="61" VerticalAlignment="Top" Width="239" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Yes.png" Margin="-1550,335,0,0" Visibility="Hidden" Opacity="0" MouseEnter="Dialog_Yes_Image_MouseEnter" MouseLeave="Dialog_Yes_Image_MouseLeave" MouseDown="Dialog_Yes_Image_MouseDown"/>
+            <Image x:Name="Dialog_No_Image" Height="61" VerticalAlignment="Top" Width="240" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\No.png" Margin="-1000,335,0,0" Visibility="Hidden" Opacity="0" MouseEnter="Dialog_No_Image_MouseEnter" MouseLeave="Dialog_No_Image_MouseLeave" MouseDown="Dialog_No_Image_MouseDown"/>
+            <Image x:Name="Feed_Image" Height="720" VerticalAlignment="Top" Width="1280" Stretch="Fill" Margin="-1280,0,0,0" Visibility="Hidden"/>
+            <Image x:Name="White_Image" Height="720" VerticalAlignment="Top" Width="1280" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\White.png" Stretch="Fill" Margin="-1280,0,0,0" Visibility="Hidden"/>
+            <Everyone_With_Math:Configs_Class x:Name="Configs_Window" Width="1280" Height="720" Margin="-1280,0,0,0" Visibility="Hidden"/>
+            <local:Save x:Name="Save_Window" Width="1280" Height="720" Margin="-1280,0,0,0" Visibility="Hidden"/>
+            <local:Load x:Name="Load_Window" Width="1280" Height="720" Margin="-1280,0,0,0" Visibility="Hidden"/>
+            <local:Result x:Name="Result_Window" Width="1280" Height="720" Margin="-1280,0,0,0" Visibility="Hidden"/>
+            <Image x:Name="Mouse_Effect_Image" Height="60" VerticalAlignment="Top" Width="160" Stretch="Fill" Margin="0,0,0,0"/>
+        </DockPanel>
+    </Viewbox>
+</Window>

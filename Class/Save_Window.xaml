@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Everyone_With_Math.Class.Save"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="1280">
+    <Viewbox>
+        <DockPanel Height="720" Width="1280">
+            <Image x:Name="Main_Image" Height="720" VerticalAlignment="Top" Width="1280" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Save.png"/>
+            <Image x:Name="Save_01_Image" Height="152" VerticalAlignment="Top" Stretch="None" Width="676" Margin="-1280,80,0,0" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Save_01.png" MouseEnter="Save_01_Image_MouseEnter" MouseLeave="Save_01_Image_MouseLeave"/>
+            <Image x:Name="Save_01_Picture_Image" Height="133" VerticalAlignment="Top" Width="234" Margin="-1614,89,0,0" MouseEnter="Save_01_Picture_Image_MouseEnter"/>
+            <TextBlock x:Name="Save_01_Time_T" Height="31" Width="250" TextWrapping="Wrap" Text="" Margin="-1100,95,0,0" VerticalAlignment="Top" Foreground="Aqua" FontFamily="Segoe UI Semibold" FontSize="24" TextAlignment="Center" MouseEnter="Save_01_Time_T_MouseEnter"/>
+            <TextBlock x:Name="Save_01_Question_T" Height="31" Width="250" TextWrapping="Wrap" Text="" Margin="-1100,143,0,0" VerticalAlignment="Top" Foreground="Aqua" FontFamily="Segoe UI Semibold" FontSize="24" TextAlignment="Center" MouseEnter="Save_01_Question_T_MouseEnter"/>
+            <TextBlock x:Name="Save_01_Grade_T" Height="31" Width="250" TextWrapping="Wrap" Text="" Margin="-1100,183,0,0" VerticalAlignment="Top" Foreground="Aqua" FontFamily="Segoe UI Semibold" FontSize="24" TextAlignment="Center" MouseEnter="Save_01_Grade_T_MouseEnter"/>
+            <Image x:Name="Save_02_Image" Height="152" VerticalAlignment="Top" Stretch="None" Width="676" Margin="-1280,250,0,0" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Save_01.png" MouseEnter="Save_02_Image_MouseEnter" MouseLeave="Save_02_Image_MouseLeave"/>
+            <Image x:Name="Save_02_Picture_Image" Height="133" VerticalAlignment="Top" Width="234" Margin="-1614,259,0,0" MouseEnter="Save_02_Picture_Image_MouseEnter"/>
+            <TextBlock x:Name="Save_02_Time_T" Height="31" Width="250" TextWrapping="Wrap" Text="" Margin="-1100,270,0,0" VerticalAlignment="Top" Foreground="Aqua" FontFamily="Segoe UI Semibold" FontSize="24" TextAlignment="Center" MouseEnter="Save_02_Time_T_MouseEnter"/>
+            <TextBlock x:Name="Save_02_Question_T" Height="31" Width="250" TextWrapping="Wrap" Text="" Margin="-1100,312,0,0" VerticalAlignment="Top" Foreground="Aqua" FontFamily="Segoe UI Semibold" FontSize="24" TextAlignment="Center" MouseEnter="Save_02_Question_T_MouseEnter"/>
+            <TextBlock x:Name="Save_02_Grade_T" Height="31" Width="250" TextWrapping="Wrap" Text="" Margin="-1100,353,0,0" VerticalAlignment="Top" Foreground="Aqua" FontFamily="Segoe UI Semibold" FontSize="24" TextAlignment="Center" MouseEnter="Save_02_Grade_T_MouseEnter"/>
+            <Image x:Name="Save_03_Image" Height="152" VerticalAlignment="Top" Stretch="None" Width="676" Margin="-1280,420,0,0" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Save_01.png" MouseEnter="Save_03_Image_MouseEnter" MouseLeave="Save_03_Image_MouseLeave"/>
+            <Image x:Name="Save_03_Picture_Image" Height="133" VerticalAlignment="Top" Width="234" Margin="-1614,429,0,0" MouseEnter="Save_03_Picture_Image_MouseEnter"/>
+            <TextBlock x:Name="Save_03_Time_T" Height="31" Width="250" TextWrapping="Wrap" Text="" Margin="-1100,441,0,0" VerticalAlignment="Top" Foreground="Aqua" FontFamily="Segoe UI Semibold" FontSize="24" TextAlignment="Center" MouseEnter="Save_03_Time_T_MouseEnter"/>
+            <TextBlock x:Name="Save_03_Question_T" Height="31" Width="250" TextWrapping="Wrap" Text="" Margin="-1100,482,0,0" VerticalAlignment="Top" Foreground="Aqua" FontFamily="Segoe UI Semibold" FontSize="24" TextAlignment="Center" MouseEnter="Save_03_Question_T_MouseEnter"/>
+            <TextBlock x:Name="Save_03_Grade_T" Height="31" Width="250" TextWrapping="Wrap" Text="" Margin="-1100,522,0,0" VerticalAlignment="Top" Foreground="Aqua" FontFamily="Segoe UI Semibold" FontSize="24" TextAlignment="Center" MouseEnter="Save_03_Grade_T_MouseEnter"/>
+            <Image x:Name="Back_B" Height="68" VerticalAlignment="Top" Width="311" Stretch="None" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Back.png" Margin="-2075,575,0,0" MouseEnter="Back_B_MouseEnter" MouseLeave="Back_B_MouseLeave" MouseDown="Back_B_MouseDown"/>
+            <Image x:Name="Save_01_Delete_Image" Height="35" VerticalAlignment="Top" Width="35" Margin="-710,80,0,0" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Close_01.png" Stretch="Uniform" MouseEnter="Save_01_Delete_Image_MouseEnter" MouseLeave="Save_01_Delete_Image_MouseLeave" MouseDown="Save_01_Delete_Image_MouseDown"/>
+            <Image x:Name="Save_02_Delete_Image" Height="35" VerticalAlignment="Top" Width="35" Margin="-710,250,0,0" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Close_01.png" Stretch="Uniform" MouseEnter="Save_02_Delete_Image_MouseEnter" MouseLeave="Save_02_Delete_Image_MouseLeave" MouseDown="Save_02_Delete_Image_MouseDown"/>
+            <Image x:Name="Save_03_Delete_Image" Height="35" VerticalAlignment="Top" Width="35" Margin="-710,420,0,0" Source="E:\Program Files\Projects\Everyone_With_Math\bin\Debug\Resources\BG\Close_01.png" Stretch="Uniform" MouseEnter="Save_03_Delete_Image_MouseEnter" MouseLeave="Save_03_Delete_Image_MouseLeave" MouseDown="Save_03_Delete_Image_MouseDown"/>
+        </DockPanel>
+    </Viewbox>
+</UserControl>
