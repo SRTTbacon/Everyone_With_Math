@@ -169,9 +169,13 @@ namespace Everyone_With_Math.Class
                 Left = w * 0.05;
                 Top = h * 0.025;
             }
-            StreamReader str2 = new StreamReader(Path + "/Resources/Save/Load_01.dat");
-            int Load_Number = int.Parse(str2.ReadLine());
-            str2.Close();
+            int Load_Number = 0;
+            if (File.Exists(Path + "/Resources/Save/Load_01.dat"))
+            {
+                StreamReader str2 = new StreamReader(Path + "/Resources/Save/Load_01.dat");
+                Load_Number = int.Parse(str2.ReadLine());
+                str2.Close();
+            }
             if (File.Exists(Path + "/Resources/Save/Load_Question_Number.dat"))
             {
                 //Grade_01クラスで指定した問題を永遠とプレイできるように
